@@ -1,0 +1,160 @@
+.specialists {
+  background-color: $lightWhite;
+  padding: 80px 0;
+  .title {
+    color: $titleColor;
+    font-size: 44px;
+    line-height: 150%;
+    margin-bottom: 40px;
+  }
+  &_items {
+    @include flex-all-sb;
+    gap: 20px;
+  }
+  &_item {
+    max-width: 279px;
+    cursor: pointer;
+    position: relative;
+    transition: padding 0.5s;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    @include hover {
+      padding: 5px;
+      &::before {
+        opacity: 1;
+      }
+    }
+    .image {
+      margin-bottom: 24px;
+    }
+    .title {
+      font-size: 24px;
+      margin-bottom: 7px;
+    }
+  }
+  .specialists_desc {
+    color: rgba(0, 0, 0, 0.50);
+    font-family: $font-familyW;
+    font-weight: 400;
+  }
+}
+
+
+
+
+.specialist_popup {
+  position: fixed;
+  z-index: -100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(84, 78, 64, 0.51);
+  @include flex-all-center;
+  &-inner {
+    background-color: #fff;
+    padding-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 55px;
+  }
+  .specialist_content {
+    padding-top: 40px;
+    padding-bottom: 37px;
+  }
+  .specialist_content-head {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .specialist_image {
+    .image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+  }
+  .specialist_desc {
+    .title {
+      font-size: 24px;
+      margin-bottom: 7px;
+    }
+    p {
+      margin: 0;
+      margin-bottom: 32px;
+    }
+    a {
+      color: #000;
+      font-family: $font-familyW;
+      font-weight: 400;
+      svg {
+        margin-left: 8px;
+      }
+    }
+  }
+  .specialist_education {
+    .title {
+      color: $titleColor;
+      font-size: 24px;
+      line-height: 150%;
+      margin-bottom: 20px;
+    }
+    p {
+      max-width: 536px;
+      font-family: $font-familyW;
+      font-weight: 400;
+      line-height: 160%;
+      margin: 0;
+    }
+  }
+  .specialist_experience {
+    position: relative;
+    background-color: $lightWhite;
+    padding: 70px 40px 69px 26px;
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 14px;
+      width: 36px;
+      height: 36px;
+    }
+    .title {
+      color: $titleColor;
+      font-size: 24px;
+      line-height: 150%;
+      margin-bottom: 17px;
+    }
+    .specialist_experience-item {
+      margin-bottom: 20px;
+      .title {
+        color: #000;
+        font-family: $font-familyW;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 160%;
+        margin-bottom: 7px;
+      }
+      p {
+        color: $lightSilver;
+        line-height: 150%;
+        margin: 0;
+      }
+    }
+    .specialist_experience-item:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

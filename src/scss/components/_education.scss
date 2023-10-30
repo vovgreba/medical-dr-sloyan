@@ -1,0 +1,29 @@
+.education {
+  background-color: $bg-dark-footer;
+  padding: 80px 0;
+  &_inner {
+    display: flex;
+    gap: 41px;
+    align-items: flex-start;
+  }
+  &_title {
+    max-width: 359px;
+    width: 100%;
+  }
+  .title {
+    color: #fff;
+  }
+  .education_content {
+    p {
+      color: #fff;
+      max-width: 680px;
+      font-family: $font-familyW;
+      line-height: 160%;
+      margin-bottom: 30px;
+    }
+    p:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+

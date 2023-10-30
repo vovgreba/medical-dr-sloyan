@@ -1,0 +1,33 @@
+.biography {
+  background-color: $primaryBackgroundColor;
+  padding: 80px 0;
+  &_inner {
+    display: flex;
+    gap: 41px;
+    align-items: flex-start;
+  }
+  .title {
+    color: $titleColor;
+    margin-bottom: 152px;
+  }
+  .biography_content {
+    p {
+      max-width: 680px;
+      font-family: $font-familyW;
+      line-height: 160%;
+      margin-bottom: 30px;
+    }
+    p:last-child {
+      margin-bottom: 15px;
+    }
+    &-images {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      .images--top {
+        margin-top: 52px;
+      }
+    }
+  }
+}

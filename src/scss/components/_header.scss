@@ -1,0 +1,28 @@
+.header {
+  background-color: $header-bg;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  &_contacts  {
+    @include flex-all-sb;
+  }
+  &_btn {
+    padding: 16px 40px;
+    max-width: 247px;
+    background-color: #fff;
+    color: $sunsetOrange;
+    @include hover {
+      border-radius: 5px;
+      background-color: #d9ae43; /* Змінюємо фон кнопки при наведенні */
+      color: #fff;
+      box-shadow: 0 4px 8px  rgba(217, 174, 67, 0.4);
+    }
+  }
+  .contacts-phone {
+    a {
+      font-family: $font-familyW;
+      font-size: 30px;
+      font-weight: 700;
+      color: $sunsetOrange;
+    }
+  }
+}

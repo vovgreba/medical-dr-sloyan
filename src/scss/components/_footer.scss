@@ -1,0 +1,48 @@
+.footer {
+  background-color: $bg-dark-footer;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  &_contacts  {
+    @include flex-all-sb;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+    padding-bottom: 40px;
+  }
+  &_btn {
+    padding: 16px 27px;
+    max-width: 221px;
+    background-color: #fff;
+    color: $sunsetOrange;
+  }
+  .contacts-phone {
+    display: block;
+    text-align: right;
+    a {
+      font-family: $font-familyW;
+      font-size: 30px;
+      font-weight: 700;
+      color: $sunsetOrange;
+    }
+    button {
+      margin-top: 5px;
+      margin-left: auto;
+      margin-right: 0;
+      color: #fff;
+      border-bottom: 1px dashed $sunsetOrange;
+      transition: color 0.5s;
+      @include hover {
+        color: $honeyGold;
+      }
+    }
+  }
+  &_logo-studio {
+    @include flex-all-center;
+    padding-top: 20px;
+    span {
+      color: #FFF;
+      font-family: $font-familyW;
+      font-size: 14px;
+      font-weight: 500;
+      margin-right: 31px;
+    }
+  }
+}
