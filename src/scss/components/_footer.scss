@@ -15,7 +15,31 @@
   }
   .contacts-phone {
     display: block;
-    text-align: right;
+    .whatsapp {
+      path {
+        transition: fill 0.5s;
+      }
+      @include hover {
+        path {
+          fill: #008000;
+        }
+        path:last-child {
+          fill: #fff;
+        }
+      }
+    }
+
+    .telegram {
+      path {
+        transition: fill 0.5s;
+      }
+      @include hover {
+        path {
+          fill: #039BE5;
+        }
+
+      }
+    }
     a {
       font-family: $font-familyW;
       font-size: 30px;
@@ -43,6 +67,29 @@
       font-size: 14px;
       font-weight: 500;
       margin-right: 31px;
+    }
+  }
+}
+
+@media (max-width: (846px)) {
+  .footer_contacts {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer {
+    .contacts-phone {
+      button {
+        margin: 10px auto 0;
+      }
+    }
+  }
+}
+@media (max-width: (360px)) {
+  .footer {
+    .contacts-phone {
+      a {
+        font-size: 25px;
+      }
     }
   }
 }

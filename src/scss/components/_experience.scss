@@ -44,3 +44,22 @@
   }
 }
 
+@media (max-width: (920px)) {
+  .experience {
+    padding: 40px 0;
+  }
+  .experience_inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@include small-tablet {
+  .experience .experience_items {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .experience_experience-item {
+    text-align: center;
+  }
+}

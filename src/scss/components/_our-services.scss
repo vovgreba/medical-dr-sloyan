@@ -19,6 +19,7 @@
   &_desc {
     @include flex-all-sb;
     margin: 0;
+    gap: 30px;
     p {
       color: #000;
       font-family: $font-familyW;
@@ -40,4 +41,22 @@
 
 .our-service:last-child {
   margin-bottom: 0;
+}
+
+@include small-tablet {
+  .our-services {
+    padding: 40px 0;
+    .title {
+      margin-bottom: 30px;
+    }
+  }
+  .our-service_desc {
+    flex-direction: column;
+    align-items: center;
+    button {
+      max-width: 100%;
+      padding: 20px 0;
+    }
+  }
+
 }

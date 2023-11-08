@@ -26,3 +26,11 @@
     }
   }
 }
+
+@media (max-width: (785px)) {
+  .header_contacts {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+

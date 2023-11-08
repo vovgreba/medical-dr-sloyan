@@ -109,6 +109,33 @@
       }
     }
   }
+  .contacts-phone {
+    .whatsapp {
+      path {
+        transition: fill 0.5s;
+      }
+      @include hover {
+        path {
+          fill: #008000;
+        }
+        path:last-child {
+          fill: #fff;
+        }
+      }
+    }
+
+    .telegram {
+      path {
+        transition: fill 0.5s;
+      }
+      @include hover {
+        path {
+          fill: #036394;
+        }
+
+      }
+    }
+  }
 }
 
 .contacts-phone {
@@ -125,6 +152,7 @@
     font-size: 20px;
   }
 }
+
 .ymaps-2-1-79-map-copyrights-promo {
   display: none;
 }
@@ -137,37 +165,37 @@
   border-radius: 24px;
   .ymaps-2-1-79-user-selection-none{
     position: relative;
-    // cursor: auto !important;
     z-index: 1000 !important;
   }
 }
 
-@include small-tablet {
-
+@media (max-width: (1050px)) {
   .map_logo {
-    display: none;
+    left: 6%;
   }
-  .map_inner {
-    padding: 20px;
+}
+@media (max-width: (859px)) {
+  .map_logo {
+    left: 100px;
   }
+}
+
+@include small-tablet {
+  .map {
+    padding: 40px 0;
+  }
+  .map_logo {
+    left: 35px;
+  }
+
   .map_contact-form {
     top: 50%;
     transform: translateY(-50%);
     left: 0;
     margin: 0 auto;
   }
-}
-@media (max-width: (1300px)) {
-  .map_contact-form {
-    max-width: 550px;
-  }
-  .ymaps-2-1-79-map {
-    min-height: 680px;
-  }
-}
-@media (max-width: (769px)) {
-  .ymaps-2-1-79-map {
-    max-height: 630px;
+  .map_contacts .location {
+    margin-bottom: 20px;
   }
 }
 @media (max-width: (640px)) {
@@ -178,5 +206,32 @@
         font-size: 28px;
       }
     }
+  }
+}
+@media (max-width: (345px)) {
+  .map_contacts .location_head {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .map {
+    .contacts-phone a {
+      font-size: 17px;
+    }
+    .title {
+      margin-bottom: 20px;
+    }
+  }
+  .map_contact-form {
+    position: static;
+    top: 0;
+    transform: unset;
+  }
+  .map {
+    .ymaps-2-1-79-map {
+      display: none;
+    }
+  }
+  .map_logo {
+    display: none;
   }
 }

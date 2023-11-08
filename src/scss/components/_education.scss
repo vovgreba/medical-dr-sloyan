@@ -27,3 +27,22 @@
   }
 }
 
+@media (max-width: (1205px)) {
+  .education_title {
+    max-width: 339px;
+  }
+}
+@media (max-width: (1164px)) {
+  .education_title {
+    max-width: 280px;
+  }
+}
+
+@include small-tablet {
+  .education {
+    padding: 40px 0;
+  }
+  .education_inner {
+    flex-direction: column;
+  }
+}

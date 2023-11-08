@@ -31,3 +31,57 @@
     }
   }
 }
+
+@media (max-width: (1205px)) {
+  .biography .biography_content-images {
+    gap: 20px;
+  }
+  .biography_inner {
+    gap: 20px;
+  }
+}
+@media (max-width: (1164px)) {
+  .biography .biography_content-images {
+    .images--top {
+      max-width: 300px;
+    }
+  }
+  .biography_inner {
+    gap: 20px;
+  }
+  .biography_image {
+    max-width: 300px;
+  }
+}
+@media (max-width: (900px)) {
+  .biography  {
+    padding: 40px 0;
+    .title {
+      margin-bottom: 20px;
+    }
+  }
+  .biography_inner {
+    flex-direction: column;
+  }
+  .biography_image {
+    max-width: 100%;
+  }
+  .biography .biography_content-images {
+    .images--top {
+      max-width: 100%;
+    }
+  }
+}
+@media (max-width: (800px)) {
+  .biography_inner {
+    flex-direction: column;
+  }
+  .biography_image {
+    max-width: 100%;
+  }
+  .biography .biography_content-images {
+    flex-direction: column;
+    .images--top {
+    }
+  }
+}

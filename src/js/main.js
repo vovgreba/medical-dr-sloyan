@@ -6,3 +6,4 @@ import './_components';
 
 import slider from './components/slider'
 import map from './components/map'
+import popup from './components/popup'

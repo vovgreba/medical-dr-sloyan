@@ -56,19 +56,25 @@
 .specialist_popup {
   position: fixed;
   z-index: -100;
+  opacity: 0;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: rgba(84, 78, 64, 0.51);
+  transition: all 0.5s linear;
   @include flex-all-center;
   &-inner {
+    position: relative;
+    z-index: 200;
     background-color: #fff;
     padding-left: 40px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 55px;
+    margin: 0 15px;
+
   }
   .specialist_content {
     padding-top: 40px;
@@ -156,5 +162,55 @@
     .specialist_experience-item:last-child {
       margin-bottom: 0;
     }
+  }
+}
+.specialist_popup--active {
+  z-index: 100;
+  opacity: 1;
+}
+
+@media (max-width: (1100px)) {
+  .specialists_items {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    justify-content: center;
+  }
+}
+@media (max-width: (800px)) {
+  .specialists {
+    padding: 40px 0;
+  }
+}
+@include small-tablet  {
+  .specialist_popup-inner {
+    position: relative;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+    justify-content: flex-start;
+  }
+  .specialist_popup .specialist_experience {
+    position: static;
+  }
+  .specialist_popup .specialist_experience {
+    padding: 20px;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: (665px)) {
+  .specialists_items {
+    display: grid;
+    grid-template-columns: 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: (430px)) {
+  .specialist_popup .specialist_content-head {
+    flex-direction: column;
   }
 }

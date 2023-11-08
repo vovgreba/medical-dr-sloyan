@@ -8,6 +8,12 @@
   }
   &_inner {
     position: relative;
+    .swiper-slide {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     .my-button-prev, .my-button-next {
       width: 71px;
       height: 71px;
@@ -48,5 +54,11 @@
 
 .works {
   background-color: $bg-dark-footer;
+}
+
+@media (max-width: (800px)) {
+  .our-works, .works {
+    padding: 40px 0;
+  }
 }
 

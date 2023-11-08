@@ -12,9 +12,20 @@ const swiper = new Swiper('.mySwiper', {
   modules: [Navigation, Pagination],
   // Optional parameters
   loop: true,
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 20,
-
+  mousewheel: true,
+  breakpoints: {
+    // Коли розширення екрану менше або дорівнює 800px
+    800: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1000: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
