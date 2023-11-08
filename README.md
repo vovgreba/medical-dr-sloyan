@@ -3,6 +3,7 @@
 > Используется сборка на Gulp 4 
 ## Также вы можете посмотреть на GitHub Pages этот проект
 [Ссылка на главную страницу](https://vovgreba.github.io/medical-dr-sloyan/app/index)
+
 [Ссылка на страницу с главным врачом](https://vovgreba.github.io/medical-dr-sloyan/app/about_skloyan)
 
 ### Начало работы
