@@ -12,7 +12,7 @@
     position: relative;
     max-width: $content-width;
     width: 100%;
-    min-height: 680px;
+    min-height: 717px;
   }
   .svg-title {
     text-align: center;
@@ -20,15 +20,11 @@
     margin-top: 0;
   }
   &_logo {
-    position: absolute;
-    @include flex-all-center;
     width: 68px;
     height: 68px;
     background-color: #fff;
     border-radius: 50%;
     border: 1px solid $ivory;
-    bottom: 30%;
-    left: 13%;
     z-index: 10;
   }
   &_contact-form {
@@ -40,6 +36,27 @@
     z-index: 10;
     padding: 34px 20px 54px;
     background-color: #fff;
+  }
+
+  &_custom-checkbox {
+    @include custom-checkbox;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 468px;
+    width: 100%;
+    .checkbox {
+      width: 15px;
+      height: 15px;
+      margin-bottom: 0;
+    }
+
+  }
+  &_checkbox-content {
+    font-size: 10px;
   }
   &_contacts {
     .svg-title {
@@ -96,6 +113,7 @@
         color: rgba(0, 0, 0, 0.50);
         font-family: $font-familyW;
         font-weight: 400;
+        outline: none;
       }
       input:nth-child(2) {
         margin-bottom: 18px;
@@ -112,7 +130,7 @@
   .contacts-phone {
     .whatsapp {
       path {
-        transition: fill 0.5s;
+        transition: fill 0.3s;
       }
       @include hover {
         path {
@@ -126,7 +144,7 @@
 
     .telegram {
       path {
-        transition: fill 0.5s;
+        transition: fill 0.3s;
       }
       @include hover {
         path {
